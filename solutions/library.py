@@ -22,6 +22,7 @@ if __name__ == "__main__":
     # Assuming the identifier, or "id" attribute, of each book is and will always be unique,
     # ... and assuming the order of books may vary,
     # ... "print" the title of the book whose identifier is equal to 4 (i.e. "Book D"):
+    print([b["title"] for b in books if b["id"]==4][0])
 
 
 
@@ -30,3 +31,6 @@ if __name__ == "__main__":
     #
     # Assuming the "year" attribute represents the year a given book was published,
     # ... "print" the number of books published before the year 1990 (i.e. 4):
+    print(len([b["year"] for b in books if b["year"]>1990]))
+
+    

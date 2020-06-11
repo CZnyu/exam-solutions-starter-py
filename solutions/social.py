@@ -42,7 +42,7 @@ if __name__ == "__main__":
     print("------------------")
     print("PROCESSING SOCIAL MEDIA DATA...")
     print("------------------")
-    print(tweets)
+    #print(tweets)
 
     # breakpoint()
 
@@ -50,6 +50,7 @@ if __name__ == "__main__":
     # QUESTION A
     #
     # "Print" the screen name of the user who authored the first tweet (i.e. "sandwhoa"):
+    print(tweets[0]["user"]["screen_name"])
 
 
     #
@@ -58,6 +59,8 @@ if __name__ == "__main__":
     # Of all the tweets which include the phrase "@sandwhoa" in their full text,
     # ... "print" the screen name of the user who authored that tweet,
     # ... each on a separate line (i.e. "person2", then "person3"):
+    user_info = ([n["user"] for n in tweets if "@sandwhoa" in ["full_text"]])
+    print(user_info)
 
 
     #

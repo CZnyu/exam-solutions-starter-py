@@ -23,6 +23,8 @@ if __name__ == "__main__":
     # ... and assuming the order of salads may vary,
     # ... "print" the name of the salad whose identifier is equal to 3 (i.e. "Waldorf"):
 
+    print([n["name"] for n in salads if n["id"]==3][0])
+
 
 
     #
@@ -30,3 +32,14 @@ if __name__ == "__main__":
     #
     # Assuming the "price" attribute represents a salad’s cost to the consumer,
     # ... "print" the number of salads which are more expensive than ten dollars (i.e. 3):
+
+    # sticker = []
+    # for p in salads:
+    #     sticker.append(p["price"])
+
+    # expensive = [e for e in sticker if e>10.0]
+    # expensive_salads = len(expensive)
+    # print(expensive_salads)
+
+    print(len([s["price"] for s in salads if s["price"]>10.0]))
+
